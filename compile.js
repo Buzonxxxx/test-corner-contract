@@ -7,7 +7,7 @@ const inboxPath = path.resolve(__dirname, 'contracts', 'TestCorner.sol')
 
 const source = fs.readFileSync(inboxPath, 'utf8')
 
-// console.log(solc.compile(source, 1))
-module.exports = solc.compile(source, 1).contracts[':Greeting']
+// console.log(solc.compile(source).contracts[':Greeting'])
+module.exports = solc.compile(source).contracts[':Greeting']
 
 
